@@ -1,0 +1,237 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+body, html {
+  height: 100%; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  text-decoration: none; }
+
+.basic-a, header .hero-content a, .download a {
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.85em;
+  opacity: 0.95;
+  display: inline-block;
+  border-radius: 2.5px;
+  background: #e61c26;
+  font-weight: 600; }
+
+.basic-h4, footer section .location h4, footer section .share h4, footer section .about h4 {
+  font-weight: 600;
+  font-size: 0.90em;
+  margin-bottom: 25px;
+  text-transform: uppercase; }
+
+/* Mobile Styles */
+body {
+  width: 100%;
+  background: white;
+  font-family: 'Roboto', sans-serif;
+  display: grid;
+  grid-template-areas: "header"  "features" "projects" "team-members" "testimonial" "download" "footer"; }
+
+header {
+  grid-area: header;
+  background: url("../assets/images/banner.jpg") no-repeat center;
+  background-size: cover; }
+  header .main-nav {
+    display: grid;
+    grid-template-areas: "logo nav-links nav-links";
+    padding: 40px 25px;
+    border-bottom: #5D5C74 1px solid; }
+    header .main-nav .logo {
+      grid-area: logo; }
+      header .main-nav .logo p {
+        font-size: 1.8em;
+        font-weight: bold;
+        color: #5D5C74; }
+        header .main-nav .logo p span {
+          font-weight: normal;
+          color: #D4D4DA; }
+    header .main-nav .nav-links {
+      grid-area: nav-links;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      color: #D4D4DA; }
+  header .hero-content {
+    padding: 85px 25px 0 25px;
+    color: white;
+    text-align: center;
+    line-height: 1.2; }
+    header .hero-content h1 {
+      font-size: 2.7em;
+      font-weight: bold;
+      text-transform: uppercase; }
+    header .hero-content p {
+      color: #D4D4DA;
+      font-size: 1.1em;
+      line-height: 1.5;
+      margin-top: 10px;
+      margin-bottom: 80px; }
+    header .hero-content a {
+      padding: 15px 40px;
+      margin-bottom: 250px; }
+
+.features {
+  grid-area: features;
+  padding: 90px 30px;
+  text-align: center; }
+  .features .feat {
+    margin-bottom: 55px; }
+    .features .feat i {
+      font-size: 70px;
+      opacity: 0.88;
+      color: #e84545; }
+    .features .feat h3 {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 0.85em;
+      margin-top: 30px;
+      margin-bottom: 15px; }
+    .features .feat p {
+      color: #6c7279;
+      font-size: 0.90em;
+      line-height: 1.5; }
+
+.projects {
+  grid-area: projects; }
+  .projects img {
+    width: 100%;
+    height: auto; }
+
+.team-members {
+  grid-area: team-members;
+  padding: 95px 155px; }
+  .team-members .member {
+    text-align: center; }
+    .team-members .member img {
+      margin-top: 55px; }
+    .team-members .member .first-member {
+      margin-top: 0px; }
+    .team-members .member h3 {
+      font-size: 1.2em;
+      opacity: 0.85;
+      margin-top: 17px; }
+    .team-members .member p:nth-child(3) {
+      color: #e84545;
+      text-transform: uppercase;
+      font-size: 0.80em;
+      margin-top: 8px; }
+    .team-members .member p:nth-child(4) {
+      font-size: 0.85em;
+      margin-top: 25px;
+      line-height: 1.6;
+      color: #6c7279; }
+    .team-members .member .social {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 25px;
+      font-size: 40px; }
+      .team-members .member .social span {
+        color: #c4cbd3; }
+      .team-members .member .social span:hover {
+        color: #fda7a7; }
+
+.testimonials {
+  grid-area: testimonial; }
+
+.download {
+  grid-area: download;
+  text-align: center; }
+  .download h4 {
+    font-size: 1.5em;
+    margin-bottom: 14px; }
+  .download p {
+    font-size: 0.85em;
+    font-weight: 600;
+    margin-bottom: 32px; }
+  .download a {
+    padding: 15px 40px;
+    margin-bottom: 90px;
+    letter-spacing: .2px; }
+
+footer {
+  background-color: #3a3e64;
+  grid-area: footer;
+  text-align: center;
+  color: white; }
+  footer section .location {
+    margin: 50px 0; }
+    footer section .location p {
+      font-size: 0.85em;
+      opacity: 0.5; }
+  footer section .share {
+    margin-bottom: 40px; }
+    footer section .share h4 {
+      margin-bottom: 15px; }
+    footer section .share span {
+      font-size: 37px;
+      color: white;
+      margin-right: 7px; }
+    footer section .share span:hover {
+      color: #e84545; }
+  footer section .about {
+    padding: 0 20px;
+    padding-bottom: 50px; }
+    footer section .about p {
+      font-size: 0.85em;
+      opacity: 0.5; }
+  footer .copyright {
+    background-color: #313454;
+    padding: 30px 0; }
+    footer .copyright p {
+      font-size: 0.87em;
+      opacity: 0.5; }
+      footer .copyright p .heart {
+        color: red;
+        opacity: 1;
+        font-size: 0.75em; }
+      footer .copyright p .dev {
+        color: white; }
+    footer .copyright p:first-child {
+      margin-bottom: 7px; }
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.5em; } }
