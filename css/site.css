@@ -61,6 +61,10 @@ a {
   text-transform: uppercase; }
 
 /* Mobile Styles */
+.shrink-header {
+  padding: 22px 25px !important;
+  background-color: #2E2C48; }
+
 body {
   width: 100%;
   background: white;
@@ -72,11 +76,16 @@ header {
   grid-area: header;
   background: url("../assets/images/banner.jpg") no-repeat center;
   background-size: cover; }
+  header .logo-container {
+    width: 100%;
+    position: fixed;
+    z-index: 999; }
   header .main-nav {
+    padding: 40px 25px;
     display: grid;
     grid-template-areas: "logo nav-links nav-links";
-    padding: 40px 25px;
-    border-bottom: #5D5C74 1px solid; }
+    border-bottom: #5D5C74 1px solid;
+    transition: all 0.4s ease-in-out; }
     header .main-nav .logo {
       grid-area: logo; }
       header .main-nav .logo p {
@@ -94,7 +103,7 @@ header {
       justify-content: space-between;
       color: #D4D4DA; }
   header .hero-content {
-    padding: 85px 25px 0 25px;
+    padding: 250px 25px 0 25px;
     color: white;
     text-align: center;
     line-height: 1.2; }
@@ -136,22 +145,24 @@ header {
 .projects {
   grid-area: projects; }
   .projects img {
-    width: 100%;
-    height: auto; }
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle; }
 
 .team-members {
   grid-area: team-members;
-  padding: 95px 155px; }
+  padding: 40px 155px; }
   .team-members .member {
-    text-align: center; }
-    .team-members .member img {
-      margin-top: 55px; }
+    text-align: center;
+    margin-top: 55px; }
     .team-members .member .first-member {
       margin-top: 0px; }
     .team-members .member h3 {
       font-size: 1.2em;
       opacity: 0.85;
       margin-top: 17px; }
+    .team-members .member p {
+      text-align: center; }
     .team-members .member p:nth-child(3) {
       color: #e84545;
       text-transform: uppercase;
@@ -234,4 +245,117 @@ footer {
 /* Tablet Styles */
 @media only screen and (min-width: 768px) {
   .hero-content h1 {
-    font-size: 1.5em; } }
+    font-size: 1.5em; }
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "featA featB"; }
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "projectA projectB";
+    grid-gap: 1px; }
+  .team-members {
+    padding: 40px 55px;
+    display: grid;
+    grid-template-columns: 270px 270px;
+    grid-template-rows: auto;
+    justify-content: center;
+    grid-column-gap: 95px;
+    grid-template-areas: "projectA projectB"; } }
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+  .features {
+    display: grid;
+    grid-template-columns: 270px 270px 270px;
+    grid-template-areas: "featA featB featC";
+    justify-content: center;
+    grid-gap: 45px; }
+    .features .feat > p {
+      padding: 0 10px; }
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "projectA projectB"; }
+  .team-members {
+    padding: 40px 38px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    justify-content: center;
+    grid-column-gap: 20px;
+    grid-template-areas: "projectA projectB projectC projectD"; }
+    .team-members .member {
+      width: 220px; }
+      .team-members .member h3 {
+        text-align: left; }
+      .team-members .member p {
+        text-align: left; }
+      .team-members .member img {
+        width: 220px; }
+      .team-members .member .social {
+        justify-content: space-between; }
+  footer section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "footer footer footer"; }
+    footer section .location, footer section .share, footer section .about {
+      margin: 0;
+      padding-top: 70px;
+      padding-bottom: 100px; }
+      footer section .location p, footer section .share p, footer section .about p {
+        line-height: 1.6; } }
+
+/* Big Desktop Styles */
+@media only screen and (min-width: 1280px) {
+  header .hero-content h1 {
+    font-size: 3.8em;
+    padding: 0 120px; }
+  header .hero-content p {
+    font-size: 1.25em;
+    padding: 0 120px; }
+  .features {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "featA featB featC";
+    justify-content: center;
+    grid-gap: 45px;
+    padding: 90px 70px; }
+    .features .feat > p {
+      padding: 0 32.5px; }
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "projectA projectB projectC projectD";
+    grid-gap: 1px; }
+  .team-members {
+    padding: 40px 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    justify-items: center;
+    grid-column-gap: 0px;
+    grid-template-areas: "projectA projectB projectC projectD"; }
+    .team-members .member {
+      width: 270px; }
+      .team-members .member h3 {
+        text-align: left; }
+      .team-members .member p {
+        text-align: left; }
+      .team-members .member img {
+        width: 270px; }
+      .team-members .member .social {
+        justify-content: space-between; }
+  footer section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "footer footer footer"; }
+    footer section .location, footer section .share, footer section .about {
+      margin: 0;
+      padding-top: 70px;
+      padding-bottom: 100px; }
+      footer section .location p, footer section .share p, footer section .about p {
+        line-height: 1.6; } }

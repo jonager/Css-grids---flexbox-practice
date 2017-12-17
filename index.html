@@ -10,9 +10,12 @@
     rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
     <link rel="stylesheet" href="css/site.css">
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
 </head>
 <body>
-
     <header>
         <div class="logo-container">
             <nav class="main-nav">
@@ -176,6 +179,18 @@
             <p>Made with <span class="heart"><i class="fas fa-heart"></i></span>  by <span class="dev">Kamal Chaneman</span></p>
         </div>
     </footer>
+
+    <script>
+        $(document).on("scroll", function(){
+		    if($(document).scrollTop() > 100){
+                $(".main-nav").addClass("shrink-header");
+                }
+            else
+            {
+                $(".main-nav").removeClass("shrink-header");
+            }
+        });
+    </script>
 
 </body>
 </html>
